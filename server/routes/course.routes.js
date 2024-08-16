@@ -44,7 +44,7 @@ router
   .get(getAllCourses)
   .post(
     isLoggedIn,
-    authorizeRoles('ADMIN'),
+    authorizeRoles('USER'),
     upload.single('thumbnail'),
     createCourse
   )

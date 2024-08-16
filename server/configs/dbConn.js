@@ -1,4 +1,6 @@
 import mongoose from "mongoose";
+// import usermodel from "./models/user.model.js";
+// import bcrypt from 'bcryptjs';
 
 /**
  * mongoose.set("strictQuery", false); sets Mongoose's query strictness to false.
@@ -23,5 +25,28 @@ const connectToDB = async () => {
     process.exit(1);
   }
 };
+// async function init(){
+//   try {
+//       let user = await usermodel.findOne({role: "ADMIN"})
+//       if (user) {
+//           console.log("already have a admin")
+//           return
+//       }
+      
+//   } catch (error) {
+//       console.log("error while search admin", error);
+//   }
+//   try {
+//       user = await usermodel.create({
+//           fullName:"Nitin",
+//           email: "niting@g.com",
+//           role:"ADMIN",
+//           password:bcrypt.hashSync("nishu@29",7)
+//       })
+//       console.log("Admin created" , user);
+//   } catch (error) {
+//       console.log("error while creating admin",error)
+//   }
+// }
 
 export default connectToDB;
